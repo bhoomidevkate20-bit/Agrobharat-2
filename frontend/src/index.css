@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #FBF7EE;
+  color: #1F2A1F;
+}
+
+.ticker-track {
+  animation: ticker-scroll 26s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.pulse-dot {
+  animation: pulse-dot 1.8s infinite;
+}
+
+@keyframes pulse-dot {
+  50% { box-shadow: 0 0 0 8px rgba(132, 204, 22, 0.25); }
+}
+
+.grade-chip {
+  border: 1px solid #6B4226;
+  color: #6B4226;
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  padding: 0.1rem 0.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation: none; }
+}
